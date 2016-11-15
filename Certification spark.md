@@ -24,7 +24,7 @@
 ## Data Ingest
 
 *  MySQL table available
-`
+```SQL
 sqoop list-tables \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
@@ -34,29 +34,29 @@ sqoop list-databases \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
 --password training
-`
+```
 
 *  MySQL expression from sqoop
-`
+```SQL
 sqoop eval \
 --query "SELECT * FROM accounts LIMIT 5" \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
 --password training
-`
+```
 
 *  Import MySQL  from sqoop
-`
+```SQL
 sqoop import \
 --table accounts \
 --warehouse-dir /loudacre/test_import \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
 --password training
-`
+```
 
 *  Change the delimiter and file format during Sqoop import
-`
+```SQL
 sqoop import \
 --table accounts \
 --warehouse-dir /loudacre/test_import \
@@ -64,11 +64,11 @@ sqoop import \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
 --password training
-`
+```
 
 
 *  Export data to MySQL from HDFS using Sqoop
-`
+```SQL
 sqoop export \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
@@ -77,4 +77,4 @@ sqoop export \
 --table test_export \
 --export-dir /loudacre/test_import/accounts \
 --input-fields-terminated-by '\t'
-`
+```
