@@ -80,6 +80,7 @@ sqoop export \
 --export-dir /loudacre/test_import/accounts \
 --input-fields-terminated-by '\t'
 ```
+<<<<<<< HEAD
 
 ### 2. Transform, Stage, Store
 
@@ -110,3 +111,5 @@ INVALIDATE METADATA
 hdfs dfs -get /loudacre/accounts_avro/part-m-00000.avro
 avro-tools getschema part-m-00000.avro 
 ```
+=======
+>>>>>>> 48195b26154469c1708b5c3aeee1d151f51a3fe1
