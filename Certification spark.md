@@ -24,7 +24,7 @@
 ## Data Ingest
 
 *  MySQL table available
-```SQL
+```sh
 sqoop list-tables \
 --connect jdbc:mysql://localhost/loudacre \
 --username training \
